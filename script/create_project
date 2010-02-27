@@ -65,12 +65,12 @@ run("git commit -a -m 'Initial commit'")
 
 # can't vendor nokogiri because it has native extensions
 unless installed?("nokogiri")
-  run "sudo gem install nokogiri --version='1.4.0'"
+  run "gem install nokogiri --version='1.4.0'"
 end
 
 # need RedCloth installed for clearance generators to run.
 unless installed?("RedCloth")
-  run "sudo gem install RedCloth --version='4.2.2'"
+  run "gem install RedCloth --version='4.2.2'"
 end
 
 run("script/generate clearance")
